@@ -9,3 +9,6 @@ class MessageRepository:
 
     def add(self, message: Message):
         self.messages.append(message)
+
+    def get_all(self) -> List[Message]:
+        return self.messages
