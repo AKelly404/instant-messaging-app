@@ -1,6 +1,5 @@
 from typing import List
 from uuid import UUID
-
 from models.thread import Thread
 
 
@@ -21,4 +20,3 @@ class ThreadRepository:
     #     for threads in self.threads:
     #         if threads.id == id:
     #             return threads
-

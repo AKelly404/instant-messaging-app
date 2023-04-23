@@ -1,5 +1,5 @@
 from typing import List
-
+from uuid import UUID
 from models.message import Message
 
 
@@ -12,3 +12,6 @@ class MessageRepository:
 
     def get_all(self) -> List[Message]:
         return self.messages
+
+    def get_all_for_thread(self, thread_id: UUID):
+        return next((message for message in self.messages if message.thread_id == thread_id), [])
