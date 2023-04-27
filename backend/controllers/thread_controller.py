@@ -2,9 +2,23 @@ from uuid import UUID
 from fastapi import FastAPI, status
 from models.thread import Thread
 from services.thread_service import ThreadService
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 thread_service = ThreadService()
+
+origins = [
+    "http://localhost",
+    "http://localhost:5173",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/threads/{thread_id}")
