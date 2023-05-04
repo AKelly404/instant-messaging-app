@@ -7,7 +7,10 @@ function App() {
   const [data, setData] = useState<Thread[]>([])
   const renderThreads = () => {
     return data.map((element) => {
-      return <li key={element.createdAt}>{element.createdAt}</li>
+      return <div className='thread' key={element.id}>
+                <div>{element.id}</div>
+                <div>{element.lastUsedAt}</div>
+              </div>
     })
   }
   useEffect(() => {
@@ -20,9 +23,11 @@ function App() {
   }, [])
   return (
     <>
-      <ul>
+    <div className='container'>
+      <div className='threadSidebar'>
         {renderThreads()}
-      </ul>
+      </div>
+    </div>
     </>
   )
 }
