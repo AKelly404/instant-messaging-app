@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e7381706-b100-4ca2-9b7d-1356e2ed0634" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/utils/model_utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/thread_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/thread_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/message.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/message.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/models/thread.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/thread.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/todo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/services/thread.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/services/thread.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
