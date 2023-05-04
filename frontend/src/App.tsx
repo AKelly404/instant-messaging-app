@@ -2,15 +2,13 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import {ThreadService} from '../services/thread.service'
 import { Thread } from '../models/thread'
+import ThreadCard from './components/threads-card/thread-card'
 
 function App() {
   const [data, setData] = useState<Thread[]>([])
   const renderThreads = () => {
     return data.map((element) => {
-      return <div className='thread' key={element.id}>
-                <div>{element.id}</div>
-                <div>{element.lastUsedAt}</div>
-              </div>
+      return <ThreadCard key={element.id} thread={element}></ThreadCard>
     })
   }
   useEffect(() => {
