@@ -14,4 +14,5 @@ class MessageRepository:
         return self.messages
 
     def get_all_for_thread(self, thread_id: UUID):
-        return next((message for message in self.messages if message.thread_id == thread_id), [])
+        print(self.messages)
+        return [message for message in self.messages if message.thread_id == thread_id]

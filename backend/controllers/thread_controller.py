@@ -38,5 +38,5 @@ def post_thread(thread: Thread):
 
 
 @app.get("/threads/{thread_id}/messages")
-def get_messages(thread_id):
+def get_messages(thread_id: UUID):
     return thread_service.get_messages(thread_id)

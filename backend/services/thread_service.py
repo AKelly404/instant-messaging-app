@@ -35,4 +35,6 @@ class ThreadService:
         self.message_repository.add(message)
 
     def get_messages(self, thread_id: UUID):
+        message = Message(text="banana", datetime=datetime.utcnow(), thread_id=uuid.UUID("e9858f68-b987-48de-9e9a-be4957dc165a"))
+        self.message_repository.add(message)
         return self.message_repository.get_all_for_thread(thread_id)
