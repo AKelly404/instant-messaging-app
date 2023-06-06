@@ -13,17 +13,17 @@ class ThreadService:
         self.message_repository = MessageRepository()
 
     def add_thread(self):
-        thread = Thread(users=[uuid4()], created_at=datetime.utcnow(), last_used_at=datetime.utcnow())
+        thread = Thread(users=[str(uuid4())], created_at=datetime.utcnow(), last_used_at=datetime.utcnow())
         self.thread_repository.add(thread)
 
     def get_thread(self, thread_id):
-        thread = Thread(id=uuid.UUID("e9858f68-b987-48de-9e9a-be4957dc165a"), users=[uuid4()],
+        thread = Thread(id="e9858f68-b987-48de-9e9a-be4957dc165a", users=[str(uuid4())],
                         created_at=datetime.utcnow(), last_used_at=datetime.utcnow())
         self.thread_repository.add(thread)
         return self.thread_repository.get_thread(thread_id)
 
     def get_all_threads(self):
-        thread = Thread(id=uuid.UUID("e9858f68-b987-48de-9e9a-be4957dc165a"), users=[uuid4()],
+        thread = Thread(id="e9858f68-b987-48de-9e9a-be4957dc165a", users=[str(uuid4())],
                         created_at=datetime.utcnow(), last_used_at=datetime.utcnow())
         self.thread_repository.add(thread)
         return self.thread_repository.get_all_threads()
@@ -35,6 +35,6 @@ class ThreadService:
         self.message_repository.add(message)
 
     def get_messages(self, thread_id: UUID):
-        message = Message(text="banana", datetime=datetime.utcnow(), thread_id=uuid.UUID("e9858f68-b987-48de-9e9a-be4957dc165a"))
+        message = Message(text="banana", datetime=datetime.utcnow(), thread_id="e9858f68-b987-48de-9e9a-be4957dc165a")
         self.message_repository.add(message)
         return self.message_repository.get_all_for_thread(thread_id)
