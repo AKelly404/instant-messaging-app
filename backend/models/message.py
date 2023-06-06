@@ -1,9 +1,10 @@
 from datetime import datetime
 from uuid import UUID, uuid4
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, validator
 
 from utils.model_utils import to_camel_case
+
 
 
 class Message(BaseModel):
